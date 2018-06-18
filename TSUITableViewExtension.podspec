@@ -28,7 +28,7 @@ s.description  = <<-DESC
 TODO: UITableView 工具的集合,目前存放了空白页逻辑工具
 DESC
 
-s.homepage     = "https://gitlab.caiqr.com/ios_module/TSUITableViewExtension"
+s.homepage     = "https://gitlab.caiqr.com"
 
  s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
@@ -40,7 +40,7 @@ s.author             = { "Hongli183" => "261930323@qq.com" }
 s.source       = { :git => "http://gitlab.caiqr.com/ios_module/TSUITableViewExtension.git", :tag => "#{s.version.to_s}" }
 
 
-s.source_files  = "TSUITableViewExtension/TSTableViewExtensionFile/*"
+s.source_files  = "TSUITableViewExtension/TSTableViewExtensionFile/*.{h,m}"
 #  s.subspec 'TS_TableView_Empty' do |ss|
 #    TS_TableView_Empty.source_files = 'TSUITableViewExtension/TSTableViewExtensionFile/TS_TableView_Empty/*'
 #  end
