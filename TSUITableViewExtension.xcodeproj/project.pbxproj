@@ -15,8 +15,9 @@
 		511FA5B420D751D8009C3B1A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FA5B320D751D8009C3B1A /* main.m */; };
 		511FA5BE20D751D9009C3B1A /* TSUITableViewExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FA5BD20D751D8009C3B1A /* TSUITableViewExtensionTests.m */; };
 		511FA5C920D751D9009C3B1A /* TSUITableViewExtensionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FA5C820D751D9009C3B1A /* TSUITableViewExtensionUITests.m */; };
-		511FA5DD20D7526C009C3B1A /* MJ_TableView_Empty_DefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FA5D920D7526C009C3B1A /* MJ_TableView_Empty_DefaultView.m */; };
-		511FA5DE20D7526C009C3B1A /* UITableView+EmptyControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FA5DC20D7526C009C3B1A /* UITableView+EmptyControl.m */; };
+		511FA5E020D75DA5009C3B1A /* TSUITableViewExtension.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 511FA5DF20D75DA5009C3B1A /* TSUITableViewExtension.podspec */; };
+		511FA5E620D76240009C3B1A /* UITableView+EmptyControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FA5E220D76240009C3B1A /* UITableView+EmptyControl.m */; };
+		511FA5E720D76240009C3B1A /* MJ_TableView_Empty_DefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FA5E420D76240009C3B1A /* MJ_TableView_Empty_DefaultView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,11 +54,12 @@
 		511FA5C420D751D9009C3B1A /* TSUITableViewExtensionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TSUITableViewExtensionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		511FA5C820D751D9009C3B1A /* TSUITableViewExtensionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSUITableViewExtensionUITests.m; sourceTree = "<group>"; };
 		511FA5CA20D751D9009C3B1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		511FA5D820D7526C009C3B1A /* MJ_TableView_Empty_DefaultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJ_TableView_Empty_DefaultView.h; sourceTree = "<group>"; };
-		511FA5D920D7526C009C3B1A /* MJ_TableView_Empty_DefaultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJ_TableView_Empty_DefaultView.m; sourceTree = "<group>"; };
-		511FA5DA20D7526C009C3B1A /* UITableView+EmptyControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+EmptyControl.h"; sourceTree = "<group>"; };
-		511FA5DB20D7526C009C3B1A /* MJ_TableView_EmptyView_Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJ_TableView_EmptyView_Protocol.h; sourceTree = "<group>"; };
-		511FA5DC20D7526C009C3B1A /* UITableView+EmptyControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+EmptyControl.m"; sourceTree = "<group>"; };
+		511FA5DF20D75DA5009C3B1A /* TSUITableViewExtension.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TSUITableViewExtension.podspec; sourceTree = "<group>"; };
+		511FA5E120D76240009C3B1A /* UITableView+EmptyControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+EmptyControl.h"; sourceTree = "<group>"; };
+		511FA5E220D76240009C3B1A /* UITableView+EmptyControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+EmptyControl.m"; sourceTree = "<group>"; };
+		511FA5E320D76240009C3B1A /* MJ_TableView_EmptyView_Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJ_TableView_EmptyView_Protocol.h; sourceTree = "<group>"; };
+		511FA5E420D76240009C3B1A /* MJ_TableView_Empty_DefaultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJ_TableView_Empty_DefaultView.m; sourceTree = "<group>"; };
+		511FA5E520D76240009C3B1A /* MJ_TableView_Empty_DefaultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJ_TableView_Empty_DefaultView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		511FA59820D751D7009C3B1A = {
 			isa = PBXGroup;
 			children = (
+				511FA5DF20D75DA5009C3B1A /* TSUITableViewExtension.podspec */,
 				511FA5A320D751D7009C3B1A /* TSUITableViewExtension */,
 				511FA5BC20D751D8009C3B1A /* TSUITableViewExtensionTests */,
 				511FA5C720D751D9009C3B1A /* TSUITableViewExtensionUITests */,
@@ -143,21 +146,13 @@
 		511FA5D620D7521E009C3B1A /* TSTableViewExtensionFile */ = {
 			isa = PBXGroup;
 			children = (
-				511FA5D720D7521E009C3B1A /* TS_TableView_Empty */,
+				511FA5E520D76240009C3B1A /* MJ_TableView_Empty_DefaultView.h */,
+				511FA5E420D76240009C3B1A /* MJ_TableView_Empty_DefaultView.m */,
+				511FA5E320D76240009C3B1A /* MJ_TableView_EmptyView_Protocol.h */,
+				511FA5E120D76240009C3B1A /* UITableView+EmptyControl.h */,
+				511FA5E220D76240009C3B1A /* UITableView+EmptyControl.m */,
 			);
 			path = TSTableViewExtensionFile;
-			sourceTree = "<group>";
-		};
-		511FA5D720D7521E009C3B1A /* TS_TableView_Empty */ = {
-			isa = PBXGroup;
-			children = (
-				511FA5D820D7526C009C3B1A /* MJ_TableView_Empty_DefaultView.h */,
-				511FA5D920D7526C009C3B1A /* MJ_TableView_Empty_DefaultView.m */,
-				511FA5DB20D7526C009C3B1A /* MJ_TableView_EmptyView_Protocol.h */,
-				511FA5DA20D7526C009C3B1A /* UITableView+EmptyControl.h */,
-				511FA5DC20D7526C009C3B1A /* UITableView+EmptyControl.m */,
-			);
-			path = TS_TableView_Empty;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +261,7 @@
 				511FA5B120D751D8009C3B1A /* LaunchScreen.storyboard in Resources */,
 				511FA5AE20D751D8009C3B1A /* Assets.xcassets in Resources */,
 				511FA5AC20D751D7009C3B1A /* Main.storyboard in Resources */,
+				511FA5E020D75DA5009C3B1A /* TSUITableViewExtension.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,10 +286,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				511FA5DE20D7526C009C3B1A /* UITableView+EmptyControl.m in Sources */,
 				511FA5A920D751D7009C3B1A /* ViewController.m in Sources */,
+				511FA5E620D76240009C3B1A /* UITableView+EmptyControl.m in Sources */,
 				511FA5B420D751D8009C3B1A /* main.m in Sources */,
-				511FA5DD20D7526C009C3B1A /* MJ_TableView_Empty_DefaultView.m in Sources */,
+				511FA5E720D76240009C3B1A /* MJ_TableView_Empty_DefaultView.m in Sources */,
 				511FA5A620D751D7009C3B1A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
