@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #
 
 s.name         = "TSUITableViewExtension"
-s.version      = "1.0.1"
+s.version      = "1.0.2"
 s.summary      = "This a tool for UITableView"
 
 # This description is used to generate tags and improve search results.
@@ -35,7 +35,7 @@ s.homepage     = "https://gitlab.caiqr.com"
 
 s.author             = { "Hongli183" => "261930323@qq.com" }
 
-
+s.ios.deployment_target = '8.0'
 
 s.source       = { :git => "http://gitlab.caiqr.com/ios_module/TSUITableViewExtension.git", :tag => "#{s.version.to_s}" }
 
@@ -44,6 +44,6 @@ s.source_files  = "TSUITableViewExtension/TSTableViewExtensionFile/*.{h,m}"
 #  s.subspec 'TS_TableView_Empty' do |ss|
 #    TS_TableView_Empty.source_files = 'TSUITableViewExtension/TSTableViewExtensionFile/TS_TableView_Empty/*'
 #  end
-
+#s.frameworks = 'UIKit'
 
 end
