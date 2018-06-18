@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #
 
 s.name         = "TSUITableViewExtension"
-s.version      = "1.0.0"
+s.version      = "1.0.1"
 s.summary      = "This a tool for UITableView"
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,7 @@ DESC
 
 s.homepage     = "https://gitlab.caiqr.com"
 
- s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+ s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
 s.author             = { "Hongli183" => "261930323@qq.com" }

@@ -18,6 +18,7 @@
 		511FA5E020D75DA5009C3B1A /* TSUITableViewExtension.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 511FA5DF20D75DA5009C3B1A /* TSUITableViewExtension.podspec */; };
 		511FA5E620D76240009C3B1A /* UITableView+EmptyControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FA5E220D76240009C3B1A /* UITableView+EmptyControl.m */; };
 		511FA5E720D76240009C3B1A /* MJ_TableView_Empty_DefaultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FA5E420D76240009C3B1A /* MJ_TableView_Empty_DefaultView.m */; };
+		511FA5E920D76835009C3B1A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 511FA5E820D76835009C3B1A /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		511FA5E320D76240009C3B1A /* MJ_TableView_EmptyView_Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJ_TableView_EmptyView_Protocol.h; sourceTree = "<group>"; };
 		511FA5E420D76240009C3B1A /* MJ_TableView_Empty_DefaultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJ_TableView_Empty_DefaultView.m; sourceTree = "<group>"; };
 		511FA5E520D76240009C3B1A /* MJ_TableView_Empty_DefaultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJ_TableView_Empty_DefaultView.h; sourceTree = "<group>"; };
+		511FA5E820D76835009C3B1A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		511FA59820D751D7009C3B1A = {
 			isa = PBXGroup;
 			children = (
+				511FA5E820D76835009C3B1A /* LICENSE */,
 				511FA5DF20D75DA5009C3B1A /* TSUITableViewExtension.podspec */,
 				511FA5A320D751D7009C3B1A /* TSUITableViewExtension */,
 				511FA5BC20D751D8009C3B1A /* TSUITableViewExtensionTests */,
@@ -262,6 +265,7 @@
 				511FA5AE20D751D8009C3B1A /* Assets.xcassets in Resources */,
 				511FA5AC20D751D7009C3B1A /* Main.storyboard in Resources */,
 				511FA5E020D75DA5009C3B1A /* TSUITableViewExtension.podspec in Resources */,
+				511FA5E920D76835009C3B1A /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
