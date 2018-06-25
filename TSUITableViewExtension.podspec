@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #
 
 s.name         = "TSUITableViewExtension"
-s.version      = "1.0.3"
+s.version      = "1.0.2"
 s.summary      = "This a tool for UITableView"
 
 # This description is used to generate tags and improve search results.
