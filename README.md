@@ -37,7 +37,7 @@
 	   dataSource = NSArray()
 	   //必须触发刷新方法
 		myTableView.reloadData()
-		![](https://ohduoklem.qnssl.com/WechatIMG35.jpeg)
+![](https://ohduoklem.qnssl.com/WechatIMG35.jpeg)
 		
 		//网络请求失败，数据源为空
 		dataSource = NSArray()
@@ -47,7 +47,7 @@
 	   //必须触发刷新方法
 		myTableView.reloadData()
 		
-		![](https://ohduoklem.qnssl.com/WechatIMG34.jpeg)
+![](https://ohduoklem.qnssl.com/WechatIMG34.jpeg)
 
        //支持自定义视图,网络请求失败提示图的协议实现与其相同
        func provideEmptyView() -> UIView! {
