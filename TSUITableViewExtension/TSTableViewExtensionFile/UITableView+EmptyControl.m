@@ -13,35 +13,35 @@
  使用：
  extension ViewController:MJ_TableView_EmptyView_Protocol{
  
-     func provideEmptyView() -> UIView! {
-     let emptyView = MJ_TableView_Empty_DefaultView.createEmpty(withImage: "wg_award_coin",
-     btnTitle: "刷新此页面") {
-     NSLog("hahahah")
-     }
-     //        let emptyView = MJ_TableView_Empty_DefaultView.createEmpty(withImage: "wg_award_coin")
-     //        let emptyView = MJ_TableView_Empty_DefaultView.createEmpty(withImage: "wg_award_coin",
-     //                                                                   contentStr: "刷新此页面")
-     //        let emptyView = MJ_TableView_Empty_DefaultView.createEmpty(withContentStr: "暂无数据",
-     //                                                                   btnTitle: "刷新页面") {
-     //
-     //        }
-     //        let emptyView = MJ_TableView_Empty_DefaultView.createLostNetConnect(withImage: "wg_award_coin",
-     //                                                                            contentStr: "暂无数据",
-     //                                                                            btnTitle: "刷新页面") {
-     //
-     //        }
+ func provideEmptyView() -> UIView! {
+ let emptyView = MJ_TableView_Empty_DefaultView.createEmpty(withImage: "wg_award_coin",
+ btnTitle: "刷新此页面") {
+ NSLog("hahahah")
+ }
+ //        let emptyView = MJ_TableView_Empty_DefaultView.createEmpty(withImage: "wg_award_coin")
+ //        let emptyView = MJ_TableView_Empty_DefaultView.createEmpty(withImage: "wg_award_coin",
+ //                                                                   contentStr: "刷新此页面")
+ //        let emptyView = MJ_TableView_Empty_DefaultView.createEmpty(withContentStr: "暂无数据",
+ //                                                                   btnTitle: "刷新页面") {
+ //
+ //        }
+ //        let emptyView = MJ_TableView_Empty_DefaultView.createLostNetConnect(withImage: "wg_award_coin",
+ //                                                                            contentStr: "暂无数据",
+ //                                                                            btnTitle: "刷新页面") {
+ //
+ //        }
  
-     return emptyView
-     }
-     func provideLostNetConnectView() -> UIView! {
-     let emptyView = MJ_TableView_Empty_DefaultView.createLostNetConnect(withImage: "wg_award_coin",
-     contentStr: "无网络连接",
-     btnTitle: "刷新页面",
-     action: {
-     NSLog("hahahah")
-     })
-     return emptyView
-     }
+ return emptyView
+ }
+ func provideLostNetConnectView() -> UIView! {
+ let emptyView = MJ_TableView_Empty_DefaultView.createLostNetConnect(withImage: "wg_award_coin",
+ contentStr: "无网络连接",
+ btnTitle: "刷新页面",
+ action: {
+ NSLog("hahahah")
+ })
+ return emptyView
+ }
  
  */
 
@@ -58,7 +58,7 @@
 
 /**
  标记当前tableView 需要展示的空数据提示View类型
-
+ 
  @param style empty_data_source 空数据 lost_net_connect 无网络连接
  */
 - (void)mj_tableView_empty_style:(MJ_TableViewEmpty_Style)style{
@@ -78,9 +78,13 @@
         // 判断网络状态
         if([self.tableView_empty_style isEqualToString:@"E"]){
             //需要展示空数据类型View
-//            UIView *view = [self prov];
+            UIView *view = [self viewWithTag:5003];
+            if (view != nil) {
+                [view removeFromSuperview];
+            }
             if ([self.delegate respondsToSelector:@selector(provideEmptyView)]) {
                 UIView *emptyView = [self.delegate performSelector:@selector(provideEmptyView)];
+                emptyView.tag = 5003;
                 [self addSubview:emptyView];
                 [emptyView setFrame:CGRectMake(0, self.contentSize.height, self.frame.size.width, self.frame.size.height - self.contentSize.height)];
                 if ([emptyView respondsToSelector:NSSelectorFromString(@"mj_hl_reloadSubviews")]) {
@@ -88,30 +92,43 @@
                 }
             }
         }else{
+            UIView *view = [self viewWithTag:6003];
+            if (view != nil) {
+                [view removeFromSuperview];
+            }
             //需要展示无网络连接类型View
             if ([self.delegate respondsToSelector:@selector(provideLostNetConnectView)]) {
                 UIView *emptyView = [self.delegate performSelector:@selector(provideLostNetConnectView)];
+                emptyView.tag = 6003;
                 [self addSubview:emptyView];
                 [emptyView setFrame:CGRectMake(0, self.contentSize.height, self.frame.size.width, self.frame.size.height - self.contentSize.height)];
                 if ([emptyView respondsToSelector:NSSelectorFromString(@"mj_hl_reloadSubviews")]) {
                     [emptyView performSelector:NSSelectorFromString(@"mj_hl_reloadSubviews")];
                 }
             }
-          
+            
         }
     }else{
-        if ([self.delegate respondsToSelector:@selector(provideEmptyView)]) {
-            UIView *emptyView = [self.delegate performSelector:@selector(provideEmptyView)];
-            if (emptyView.superview != nil) {
-                [emptyView removeFromSuperview];
-            }
+        UIView *viewN = [self viewWithTag:6003];
+        if (viewN != nil) {
+            [viewN removeFromSuperview];
         }
-        if ([self.delegate respondsToSelector:@selector(provideEmptyView)]) {
-            UIView *emptyView = [self.delegate performSelector:@selector(provideEmptyView)];
-            if (emptyView.superview != nil) {
-                [emptyView removeFromSuperview];
-            }
+        UIView *viewE = [self viewWithTag:5003];
+        if (viewE != nil) {
+            [viewE removeFromSuperview];
         }
+        //        if ([self.delegate respondsToSelector:@selector(provideEmptyView)]) {
+        //            UIView *emptyView = [self.delegate performSelector:@selector(provideEmptyView)];
+        //            if (emptyView.superview != nil) {
+        //                [emptyView removeFromSuperview];
+        //            }
+        //        }
+        //        if ([self.delegate respondsToSelector:@selector(provideEmptyView)]) {
+        //            UIView *emptyView = [self.delegate performSelector:@selector(provideEmptyView)];
+        //            if (emptyView.superview != nil) {
+        //                [emptyView removeFromSuperview];
+        //            }
+        //        }
     }
     
 }
@@ -120,6 +137,11 @@
     NSInteger sections = 1;
     NSInteger row = 0;
     BOOL isEmpty = YES;
+    if (self.canShowEmptyView.length == 0){
+        //初次加载时，会执行一次reload相关方法，这时会出现默认展示问题
+        self.canShowEmptyView = @"canShow";
+        return NO;
+    }
     if ([self.dataSource respondsToSelector:@selector(numberOfSectionsInTableView:)]) {
         sections = [self.dataSource numberOfSectionsInTableView:self];
     }
@@ -200,7 +222,7 @@
     }
 }
 
-
+static char *static_canShowEmptyView_key = "static_canShowEmptyView_key";
 static char *static_emptyStyle_key = "static_emptyStyle_key";
 @dynamic tableView_empty_style;
 - (void)setTableView_empty_style:(NSString *)tableView_empty_style{
@@ -211,4 +233,13 @@ static char *static_emptyStyle_key = "static_emptyStyle_key";
     if (!objc_getAssociatedObject(self, &static_emptyStyle_key))[self setTableView_empty_style:@"E"];
     return objc_getAssociatedObject(self, &static_emptyStyle_key);
 }
+
+
+- (void)setCanShowEmptyView:(NSString *)canShowEmptyView{
+    objc_setAssociatedObject(self, &static_canShowEmptyView_key, canShowEmptyView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+- (NSString *)canShowEmptyView{
+    return objc_getAssociatedObject(self, &static_canShowEmptyView_key);
+}
+
 @end

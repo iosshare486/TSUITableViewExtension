@@ -21,7 +21,7 @@ typedef NS_ENUM(NSUInteger, MJ_TableViewEmpty_Style) {
  */
 @property (nonatomic, strong) NSString *tableView_empty_style;
 //@property (nonatomic, assign) id<MJ_TableView_EmptyView_Protocol>empty_delegate;
-
+@property (nonatomic, strong)NSString *canShowEmptyView;  //第一次默认不展示空数据
 
 
 - (void)mj_tableView_empty_style:(MJ_TableViewEmpty_Style)style;
